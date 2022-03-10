@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 
 /**
  * main - Prints statement to stderr using fwrite
@@ -9,6 +10,6 @@
 int main(void)
 {
 	char str[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-	fwrite(str , 1 , sizeof(str));
+	write(2, str , sizeof(str));
 	return (1);
 }
