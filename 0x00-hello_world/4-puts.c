@@ -3,7 +3,7 @@
 /**
  * main - print statement using puts
  *
- * return 0 - program has run properly
+ * return: 0 means program has run properly
  */
 
 int main(void)
