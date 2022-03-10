@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/*
+/**
  * main - Prints a statement using printf
  *
  * Return: 0 if program runs successfully
