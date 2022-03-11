@@ -4,7 +4,6 @@
 
 /**
  *main - Generates a rand number, checks if it is positive, negative or zero
- *@n: random number
  *
  *Return: 0 as success value
  */
@@ -18,7 +17,7 @@ int main(void)
 	if (n > 0)
 		printf("%d is positive\n", n);
 	else if (n == 0)
-                printf("%d is zero\n", n);
+		printf("%d is zero\n", n);
 	else
 		printf("%d is negative\n", n);
 
