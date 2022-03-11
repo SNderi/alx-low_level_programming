@@ -13,9 +13,8 @@ int main(void)
 	for (l = 'a' ; l <= 'z' ; l++)
 	{
 		if (l = 'e' || l = 'q')
-			continue;
-		else
-			putchar(l);
+			l++;
+		putchar(l);
 	}
 	putchar('\n');
 	return (0);
