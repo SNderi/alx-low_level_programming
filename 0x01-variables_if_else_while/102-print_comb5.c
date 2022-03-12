@@ -21,15 +21,15 @@ int main(void)
 			{
 				for (l = 0 ; l <= 9 ; l++)
 				{
+					if (i + j + k + l == 0)
+					{
+						continue;
+					}
 					putchar(i + '0');
 					putchar(i + '0');
 					putchar(' ');
 					putchar(k + '0');
 					putchar(l + '0');
-					for (; i + j + k + l == 0 ;)
-					{
-						continue;
-					}
 					if (i + j + k + l != 35)
 					{
 						putchar(',');
