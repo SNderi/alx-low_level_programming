@@ -17,13 +17,13 @@ int main(void)
 	{
 		for (j = 0 ; j < 9 ; j++)
 		{
-			putchar(i + '0');
-			putchar(j + '0');
-			putchar(' ');
 			for (k = 0 ; k <= 9 ; k++)
 			{
-				for(l = k + 1 ; l <= 9 ; l++)
+				for (l = k + 1 ; l <= 9 ; l++)
 				{
+					putchar(i + '0');
+					putchar(i + '0');
+					putchar(' ');
 					putchar(k + '0');
 					putchar(l + '0');
 					if (i + j + k + l != 35)
