@@ -26,14 +26,14 @@ int main(void)
 					putchar(' ');
 					putchar(k + '0');
 					putchar(l + '0');
+					if (i + j + k + l == 0)
+					{
+						continue;
+					}
 					if (i + j + k + l != 35)
 					{
 						putchar(',');
 						putchar(' ');
-					}
-					if (i + j + k + l == 0)
-					{
-						continue;
 					}
 				}
 			}
