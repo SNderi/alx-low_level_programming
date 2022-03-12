@@ -31,6 +31,10 @@ int main(void)
 						putchar(',');
 						putchar(' ');
 					}
+					if (i + j + k + l = 0)
+					{
+						continue;
+					}
 				}
 			}
 		}
