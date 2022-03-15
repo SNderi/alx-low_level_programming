@@ -8,11 +8,11 @@
  * Return: 0 as success value
  */
 
-int add(int, int)
+int add(int n1, int n2)
 {
 	int res;
 
-	res = int + int;
+	res = n1 + n2;
 	printf("%d", res);
 	return (0);
 }
