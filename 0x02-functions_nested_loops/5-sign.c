@@ -4,6 +4,8 @@
 /**
  *print_sign - Print sign of a number
  *@n: number to be checked
+ *
+ *Return: 0 as success value
  */
 
 int print_sign(int n)
