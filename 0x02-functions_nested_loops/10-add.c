@@ -2,10 +2,10 @@
 #include "main.h"
 
 /**
- * add - adds two integers and prints the result
+ *add - adds two integers and prints the result
  *@n1: number 1
  *@n2: number 2
- * 
+ *
  *Return: res the summation total
  */
 
