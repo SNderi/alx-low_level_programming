@@ -1,5 +1,4 @@
 #include "main.h"
-#include <ctype.h>
 
 /**
  * _islower - Checks if a letter islower or not
@@ -9,8 +8,9 @@
 
 int _islower(int c)
 {
-	int i = _islower(c);
+	int i;
 
+	i = _islower(c);
 	if (i != 0)
 		_putchar(1 + '0');
 	else
