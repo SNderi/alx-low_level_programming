@@ -6,7 +6,7 @@
  * _isalpha - checks for alphabetic character
  * @c: operand
  *
- * Return: 0 as success value
+ * Return: result
  */
 
 int _isalpha(int c)
@@ -15,5 +15,4 @@ int _isalpha(int c)
 		_putchar(1 + '0');
 	else
 		_putchar(0 + '0');
-	return (0);
 }
