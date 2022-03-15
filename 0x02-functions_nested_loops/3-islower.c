@@ -11,6 +11,7 @@ int _islower(int c)
 	int i;
 
 	i = _islower(c);
+	_putchar(i + '0');
 	_putchar('\n');
 	return (0);
 }
