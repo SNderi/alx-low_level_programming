@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _putchar - Print _putchar followed by newline
+ * main - Print _putchar followed by newline
  *
  * Return: 0 as success value
  */
