@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * main - Print _putchar followed by newline
@@ -6,16 +6,16 @@
  * Return: 0 as success value
  */
 
-int _putchar(void)
+int _putchar(char w)
 {
-	putchar('_');
-	putchar('p');
-	putchar('u');
-	putchar('t');
-	putchar('c');
-	putchar('h');
-	putchar('a');
-	putchar('r');
+	char w[8] = "_putchar";
+	int i = 0;
+
+	while (i < 8)
+	{
+		putchar(w[i]);
+		i++
+	}
 	putchar('\n');
 	return (0);
 }
