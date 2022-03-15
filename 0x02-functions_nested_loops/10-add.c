@@ -3,9 +3,10 @@
 
 /**
  * add - adds two integers and prints the result
- *@res: total of summation
- *
- * Return: 0 as success value
+ *@n1: number 1
+ *@n2: number 2
+ * 
+ * Return: res the summation total
  */
 
 int add(int n1, int n2)
