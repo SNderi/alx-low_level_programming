@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * main - Print _putchar followed by newline
+ * _putchar - Print _putchar followed by newline
  *
  * Return: 0 as success value
  */
 
-int _putchar(char w)
+int _putchar(void)
 {
 	char w[8] = "_putchar";
 	int i = 0;
@@ -14,7 +14,7 @@ int _putchar(char w)
 	while (i < 8)
 	{
 		putchar(w[i]);
-		i++
+		i++;
 	}
 	putchar('\n');
 	return (0);
