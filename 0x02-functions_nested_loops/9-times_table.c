@@ -17,7 +17,7 @@ void times_table(void)
 
 		while (j < 9)
 		{
-			if (len(sol) == 1)
+			if (sol < 10)
 			{
 				printf("%d,  ", sol);
 				j++;
