@@ -4,7 +4,7 @@
 /**
  *print_sign - Print sign of a number
  *@n: number to be checked
- * /
+ */
 
 int print_sign(int n)
 {
