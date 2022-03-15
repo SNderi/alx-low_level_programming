@@ -4,6 +4,7 @@
 
 /**
  *_islower - Checks if a letter islower or not
+ *@c: operand
  *
  *Return: result
  */
