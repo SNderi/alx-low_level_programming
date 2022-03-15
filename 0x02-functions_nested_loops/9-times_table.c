@@ -15,10 +15,10 @@ void times_table(void)
 
 		while (j < 9)
 		{
-			printf("%d,  ", i * j);
+			printf("%d, ", i * j);
 			j++;
 		}
-		printf("%d\n", i * 9);
+		printf("%d \n", i * 9);
 		i++;
 	}
 }
