@@ -6,11 +6,10 @@
  * _abs - Computes absolute value of an int
  *@n: operand
  *
- * Return: 0 as success value
+ * Return: computed value
  */
 
 int _abs(int n)
 {
-	printf("%d", abs(n));
-	return (0);
+	return (abs(n));
 }
