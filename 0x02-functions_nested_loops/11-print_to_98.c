@@ -3,7 +3,7 @@
 
 /**
  * print_to_98 - Prints natural numbers from n to 98
- *
+ *@n: starting enumeration point
  */
 
 void print_to_98(int n)
