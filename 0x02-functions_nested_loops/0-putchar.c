@@ -6,16 +6,16 @@
  * Return: 0 as success value
  */
 
-int _putchar(void)
+int main(void)
 {
 	char w[8] = "_putchar";
 	int i = 0;
 
 	while (i < 8)
 	{
-		putchar(w[i]);
+		_putchar(w[i]);
 		i++;
 	}
-	putchar('\n');
+	_putchar('\n');
 	return (0);
 }
