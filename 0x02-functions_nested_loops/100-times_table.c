@@ -17,33 +17,14 @@ void print_times_table(int n)
 			for (j = 0; j <= n; j++)
 			{
 				res = i * j;
-				if (res == 0)
-				{
-					_putchar(res + '0');
-				}
-				else if (res < 10)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar(res + '0');
-				}
+				if (j == n)
+					printf("%d");
+				if (res < 10)
+					printf("%d,  ", res);
 				else if (res >= 10 && res < 100)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-					_putchar((res / 10) + '0');
-					_putchar((res % 10) + '0');
-				}
+					printf("%d,  ", res);
 				else if (res >= 100)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar((res / 100) + '0');
-					_putchar(((res / 10) % 10) + '0');
-					_putchar((res % 10) + '0');
-				}
+					printf("%d ", res);
 			}
 			_putchar('\n');
 		}
