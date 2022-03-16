@@ -29,7 +29,7 @@ void times_table(void)
 			j++;
 		}
 		printf("%d", i * 9);
-		_putchar('\n');
+		printf("\n");
 		i++;
 	}
 }
