@@ -16,15 +16,15 @@ void jack_bauer(void)
 		while (j < 59)
 		{
 			if (i < 10 && j < 10)
-				printf("%d%d:%d%d\n", 0, i, 0, j); 
+				printf("%d%d:%d%d\n", 0, i, 0, j);
 			else if (i < 10 && j >= 10)
 				printf("%d%d:%d\n", 0, i, j);
-			else if (i >=10 && j < 10)
+			else if (i >= 10 && j < 10)
 				printf("%d:%d%d\n", i, 0, j);
 			else
 				printf("%d:%d\n", i, j);
+			j++;
 		}
-		j++;
+		i++;
 	}
-	i++;
 }
