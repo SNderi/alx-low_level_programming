@@ -20,8 +20,8 @@ void times_table(void)
 
 			if (j == 9)
 				printf("%d", sol);
-			else if (sol < 10)
-				printf("%d, ", sol);
+			else if (sol < 9)
+				printf("%d,  ", sol);
 			else
 				printf("%d, ", sol);
 			j++;
