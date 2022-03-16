@@ -26,7 +26,7 @@ void times_table(void)
 				printf("%d, ", sol);
 			j++;
 		}
-		printf("\n");
 		i++;
 	}
+	printf("\n");
 }
