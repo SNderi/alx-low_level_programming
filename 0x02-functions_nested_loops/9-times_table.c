@@ -7,26 +7,34 @@
 
 void times_table(void)
 {
-	int i = 0;
-	int sol;
+	int i, j, mul;
 
-	while (i < 10)
+	for (i = 0; i <= 9; i++)
 	{
-		int j = 0;
-
-		while (j <= 9)
+		for (j = 0; j <= 9; j++)
 		{
-			sol = i * j;
+			mul = i * j;
+			if (j != 0)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
+			if (j == 0)
+			{
+				_putchar('0');
+			}
+			else if (mul >= 10)
+			{
+				_putchar((mul / 10) + '0');
+				_putchar((mul % 10) + '0');
+			}
+			else if ((mul < 10) && (j != 0))
+			{
+				_putchar(' ');
+				_putchar((mul % 10) + '0');
+			}
 
-			if (j == 9)
-				printf("%d", sol);
-			else if (sol < 9)
-				printf("%d,  ", sol);
-			else
-				printf("%d, ", sol);
-			j++;
 		}
-		i++;
+		_putchar('\n');
 	}
-	printf("\n");
 }
