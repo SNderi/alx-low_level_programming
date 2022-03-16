@@ -28,7 +28,8 @@ void times_table(void)
 			}
 			j++;
 		}
-		printf("%d\n", i * 9);
+		printf("%d", i * 9);
+		_putchar('\n');
 		i++;
 	}
 }
