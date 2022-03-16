@@ -14,21 +14,18 @@ void times_table(void)
 	{
 		int j = 0;
 
-		while (j < 9)
+		while (j <= 9)
 		{
 			sol = i * j;
 
-			if (sol < 10)
-			{
+			if (j == 9)
+				printf("%d", sol);
+			else if (sol < 10)
 				printf("%d,  ", sol);
-			}
 			else
-			{
 				printf("%d, ", sol);
-			}
 			j++;
 		}
-		printf("%d", i * 9);
 		printf("\n");
 		i++;
 	}
