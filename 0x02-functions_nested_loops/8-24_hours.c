@@ -9,20 +9,34 @@ void jack_bauer(void)
 {
 	int i = 0;
 
-	while (i < 24)
+	while (i < 10)
 	{
 		int j = 0;
 
 		while (j < 59)
 		{
-			if (i < 10 $$ j < 10)
-				printf("%d%d:%d%d\n", 0, i, 0, j);
-			else if (j < 10)
-				printf("%d:%d%d\n", i, 0, j);
+			if (j < 10)
+				printf("%d%d:%d%d\n", 0, i, 0, j); 
 			else
-				printf("%d:%d\n", i, j);
+				printf("%d%d:%d\n", 0, i, j);
 		}
 		j++;
 	}
 	i++;
+	int k = 10;
+
+	while (k < 24)
+	{
+		int l = 0;
+
+		while (l < 59)
+		{
+			if (l < 10)
+				printf("%d:%d%d\n", k, 0, l);
+			else
+				printf("%d:%d\n", k, l);
+		}
+		l++;
+	}
+	k++;
 }
