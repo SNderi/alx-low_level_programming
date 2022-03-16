@@ -13,7 +13,7 @@ void jack_bauer(void)
 	{
 		int j = 0;
 
-		while (j < 59)
+		while (j <= 59)
 		{
 			if (i < 10 && j < 10)
 				printf("%d%d:%d%d\n", 0, i, 0, j);
