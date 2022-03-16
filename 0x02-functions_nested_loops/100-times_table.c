@@ -4,7 +4,7 @@
 /**
  *print_times_table - prints the multiplication table
  *@n: operand limit
- * /
+ */
 
 void print_times_table(int n)
 {
