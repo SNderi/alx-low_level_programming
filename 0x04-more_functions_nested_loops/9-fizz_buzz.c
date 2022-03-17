@@ -19,6 +19,7 @@ void fizzbuzz(void)
 			printf("Buzz ");
 		else
 			printf("%d ", i);
+		i++;
 	}
 	printf("\n");
 }
