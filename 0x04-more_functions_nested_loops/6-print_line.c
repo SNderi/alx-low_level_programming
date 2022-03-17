@@ -3,6 +3,7 @@
 /**
  * print_line - Prints a straight line
  * @n: size limit
+ *
  */
 
 void print_line(int n)
