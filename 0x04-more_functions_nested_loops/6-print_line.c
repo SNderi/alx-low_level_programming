@@ -12,9 +12,9 @@ void print_line(int n)
 	while (i < n)
 	{
 		if (n < 1)
-			putchar('\n');
+			_putchar('\n');
 		else
-			putchar('_');
+			_putchar('_');
 	}
-	putchar('\n');
+	_putchar('\n');
 }
