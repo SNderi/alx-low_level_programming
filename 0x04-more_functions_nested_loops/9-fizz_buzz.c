@@ -5,7 +5,7 @@
  * fizzbuzz - Prints 1 to 100 and incorporates fizzbuzz test
  */
 
-void fizzbuzz(void)
+int fizzbuzz(void)
 {
 	int i = 1;
 
@@ -22,4 +22,5 @@ void fizzbuzz(void)
 		i++;
 	}
 	printf("\n");
+	return (0);
 }
