@@ -4,6 +4,7 @@
 
 /**
  * _isdigit - Checks if value is a digit
+ *@c: Value to be checked
  *
  * Return: Result
  */

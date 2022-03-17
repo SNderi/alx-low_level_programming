@@ -3,8 +3,10 @@
 #include <ctype.h>
 
 /**
- * mul - Checks if value is a digit
- *
+ * mul - Multiplies 2 numbers
+ * @a: Operand 1
+ * @b: Operand 2
+ * 
  * Return: result
  */
 
