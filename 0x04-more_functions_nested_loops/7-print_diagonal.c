@@ -1,27 +1,26 @@
 #include "main.h"
 
 /**
- * print_diagonal - Draws a diagonal line
- * @n: size limit
- *
+ * print_diagonal - draws a diagonal line in the terminal
+ * @n: number of times \ is printed
  */
 
 void print_diagonal(int n)
 {
-	int i;
-	int j;
+	int i, space;
 
-	for (i = 0; i <= n; i++)
+	if (n > 0)
 	{
-		if (n < 0)
+		for (i = 0; i < n; i++)
 		{
-			break;
+			for (space = 0; space < i; space++)
+			{
+				_putchar(' ');
+			}
+			_putchar('\\');
+			_putchar('\n');
 		}
-		for (j = 1; j < n; j++)
-		{
-			_putchar(' ');
-		}
-		_putchar('\');
 	}
-	_putchar('\n');
+	else
+		_putchar('\n');
 }
