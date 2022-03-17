@@ -3,6 +3,7 @@
 /**
  * print_diagonal - Draws a diagonal line
  * @n: size limit
+ *
  */
 
 void print_diagonal(int n)
@@ -18,9 +19,9 @@ void print_diagonal(int n)
 		}
 		for (j = 1; j < n; j++)
 		{
-			putchar(' ');
+			_putchar(' ');
 		}
-		putchar('\');
+		_putchar('\');
 	}
-	putchar('\n');
+	_putchar('\n');
 }
