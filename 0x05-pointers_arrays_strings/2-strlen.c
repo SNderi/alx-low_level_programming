@@ -9,7 +9,14 @@
  *Return: result
  */
 
-int _strlen(const char *s)
+int _strlen(char *s)
 {
-	return (strlen(*s));
+	int i;
+	int slen = 0;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+         slen++;
+	}
+	return (slen);
 }
