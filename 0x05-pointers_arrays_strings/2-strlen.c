@@ -9,7 +9,7 @@
  *Return: result
  */
 
-int _strlen(char *s)
+int _strlen(const char *s)
 {
 	return (strlen(*s));
 }
