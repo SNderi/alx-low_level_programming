@@ -23,9 +23,10 @@ char *_strcat(char *dest, char *src)
 	*len++;
 	*/
 
-	for (i = 0; src[i] != '\0'; ++i, ++len)
+	for (i = 0; src[i] != '\0'; len++)
 	{
 		dest[len] = src[i];
+		i++;
 	}
 	dest[len] = '\0';
 	_putchar('\n');
