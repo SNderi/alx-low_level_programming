@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strcat - Concatenates two strings but limit length of string 2
+ * _strncat - Concatenates two strings but limit length of string 2
  * @dest: First string
  * @src: Second string
  * @n: String 2 limit size
@@ -25,6 +25,5 @@ char *_strncat(char *dest, char *src, int n)
 		dest[len] = src[i];
 		i++;
 	}
-
-        return (dest);
+	return (dest);
 }
