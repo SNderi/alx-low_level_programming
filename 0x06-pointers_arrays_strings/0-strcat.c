@@ -28,6 +28,7 @@ char *_strcat(char *dest, char *src)
 		dest[len] = src[i];
 		i++;
 	}
+
 	dest[len] = '\0';
 	/*_putchar('\n');*/
 	return (dest);
