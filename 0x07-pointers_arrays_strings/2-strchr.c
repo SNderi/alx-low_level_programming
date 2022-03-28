@@ -5,17 +5,18 @@
  * @s: String to be checked
  * @c: character to find
  *
- * Return: Pointer to first occurence of the character
+ * Return: Pointer to first occurence of the character or NULL
  */
 
 char *_strchr(char *s, char c)
 {
-	unsigned int i;
-
-	for (i = 0; s[i] != '\0'; i++)
+	while (*s != '\0')
 	{
-		if (s[i] == c)
-			return (s[i]);
+		if (*s == c)
+		{
+			return (s);
+		}
+		s++;
 	}
-	return ('\0');
+	return (0);
 }
