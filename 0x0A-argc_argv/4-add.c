@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
  * main - adds integer arguments
@@ -31,7 +32,7 @@ int main(int argc, char **argv)
 
 	for (i = 1; i < argc; i++)
 	{
-		if (atoi(argv[i]) > 0)
+		if (isdigit(argv[i]))
 		{
 			add += atoi(argv[i]);
 		}
