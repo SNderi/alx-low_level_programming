@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 
 	for (i = 1; i < argc; i++)
 	{
-		if (isdigit(argv[i]))
+		if (isdigit(atoi(argv[i])))
 		{
 			add += atoi(argv[i]);
 		}
