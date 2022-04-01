@@ -32,10 +32,7 @@ int main(int argc, char **argv)
 
 	for (i = 1; i < argc; i++)
 	{
-		if (isdigit(atoi(argv[i])))
-		{
-			add += atoi(argv[i]);
-		}
+		add += atoi(argv[i]);
 	}
 	printf("%d\n", add);
 	return (0);
