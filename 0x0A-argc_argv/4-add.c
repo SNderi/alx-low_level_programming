@@ -11,28 +11,28 @@
 
 int main(int argc, char **argv)
 {
-	int sum = 0;
-	int count = 1;
 	int i;
+	int add = 0;
 
 	if (argc == 1)
 	{
 		printf("0\n");
-		return (0);
 	}
-	while (count < argc)
+
+	for (i = 1; i < argc; i++)
 	{
-		for (i = 0; argv[count][i] != '\0'; i++)
-		{
-			if (!(isdigit(argv[count][i])))
+		if (!(argv[i] >= '0' && argv[i] <= '9'))
 			{
 				printf("Error\n");
 				return (1);
 			}
-		}
-		sum += atoi(argv[count]);
-		count++;
 	}
-	printf("%d\n", sum);
+	
+	for (i = 1; i < argc; i++)
+	{
+		if (atoi(argv[i]) > 0)
+			add += atoi(argv[i]);
+	}
+	printf("%d\n", add);
 	return (0);
 }
