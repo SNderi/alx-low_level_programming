@@ -9,39 +9,36 @@
  *
  * Return: returns NULL if param is less than 1 and NULL on failure
  */
+
 int **alloc_grid(int width, int height)
 {
 	int i, j;
 	int **p;
 
-	if (width < 1 || height < 1)
+	if (width <= 0 || height <= 0)
 		return (NULL);
-
-	p = malloc(sizeof(int) * height);
-
+	p = malloc(sizeof(int) * (width + height));
 	if (p == NULL)
 	{
 		return (NULL);
+		free(p);
 	}
-
-	for (i = 0; i < height; i++)
+	for (i = 0; i < width; i++)
 	{
-		p[i] = malloc(sizeof(int) * width);
-
+		p[i] = malloc(sizeof(int) * (width - 1));
 		if (p[i] == NULL)
 		{
-			for (; i >= 0; i--)
+			for (i--; i >= 0; i--)
 				free(p[i]);
-
 			free(p);
 			return (NULL);
 		}
 	}
-
 	for (i = 0; i < height; i++)
 	{
 		for (j = 0; j < width; j++)
 			p[i][j] = 0;
 	}
 	return (p);
+	free(p);
 }
