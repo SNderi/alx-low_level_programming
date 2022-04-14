@@ -1,96 +1,48 @@
+#include <stdio.h>
+#include <stdarg.h>
 #include "variadic_functions.h"
-/**
-* print_char - Function that display a char.
-*
-*@arg: va_list variable.
-*
-*Return: Void.
-*/
-void print_char(va_list arg)
-{
-	printf("%c", va_arg(arg, int));
-}
-/**
-* print_int - Function that display an integer.
-*
-*@arg: va_list variable.
-*
-*Return: Void.
-*/
-void print_int(va_list arg)
-{
-	printf("%d", va_arg(arg, int));
-}
-/**
-*print_str - Function that display a string.
-*
-*@arg: va_list variable.
-*
-*Return: Void.
-*/
-void print_str(va_list arg)
-{
-	char *str = va_arg(arg, char *);
-
-	if (str)
-	{
-		printf("%s", str);
-		return;
-	}
-	printf("%p", str);
-}
-/**
-*print_float - Function that display a float.
-*
-*@arg: va_list variable.
-*
-*Return: Void.
-*/
-void print_float(va_list arg)
-{
-	printf("%f", va_arg(arg, double));
-}
 
 /**
- *print_all - function that print according to a string parameter.
+ * print_all - function with 2 parameter
+ * @format: char type pointer to string
  *
- *@format: string paramater.
- *
- *Return: Void.
+ * Description: prints anything followed by a new line
+ * Return: na
  */
-
 void print_all(const char * const format, ...)
 {
-	Printer  Corr[] = {
-		{'c', print_char},
-		{'i', print_int},
-		{'f', print_float},
-		{'s', print_str},
-		{0, NULL}
-	};
-	unsigned int i = 0, j = 0;
+	int j;
+	char *str;
+	char *space;
 	va_list ap;
-	char *separator = "";
 
 	va_start(ap, format);
-	while (format && format[i])
+	j = 0;
+	while (format && format[j])
 	{
-		j = 0;
-		while (Corr[j].op)
+		space = "";
+		if (format[j + 1])
+			space = ", ";
+		switch (format[j])
 		{
-			if (Corr[j].op == format[i])
-			{
-				printf("%s", separator);
-				Corr[j].f(ap);
-				separator = ", ";
-				break;
-			}
-			j++;
+
+		case 'c':
+			printf("%c%s", va_arg(ap, int), space);
+			break;
+		case 'i':
+			printf("%d%s", va_arg(ap, int), space);
+			break;
+		case 'f':
+			printf("%f%s", va_arg(ap, double), space);
+			break;
+		case 's':
+			str = va_arg(ap, char *);
+			if (!str || !*str)
+				str = "(nil)";
+			printf("%s%s", str, space);
+			break;
 		}
-		i++;
+		j++;
 	}
-
-	va_end(ap);
 	printf("\n");
-
 }
