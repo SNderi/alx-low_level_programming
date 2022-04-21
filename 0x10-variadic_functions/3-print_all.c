@@ -1,52 +1,48 @@
+#include <stdio.h>
+#include <stdarg.h>
 #include "variadic_functions.h"
 
 /**
- * print_all - prints anything.
- * @format: a list of types of arguments passed to the function.
+ * print_all - function with 2 parameter
+ * @format: char type pointer to string
  *
- * Return: no return.
+ * Description: prints anything followed by a new line
+ * Return: na
  */
 void print_all(const char * const format, ...)
 {
-	va_list mylist;
-	unsigned int i = 0, j, c = 0;
+	int j;
 	char *str;
-	const char t_arg[] = "cifs";
+	char *space;
+	va_list ap;
 
-	va_start(mylist, format);
-	while (format && format[i])
+	va_start(ap, format);
+	j = 0;
+	while (format && format[j])
 	{
-		j = 0;
-		while (t_arg[j])
+		space = "";
+		if (format[j + 1])
+			space = ", ";
+		switch (format[j])
 		{
-			if (format[i] == t_arg[j] && c)
-			{
-				printf(", ");
-				break;
-			} j++;
-		}
-		switch (format[i])
-		{
+
 		case 'c':
-			printf("%c", va_arg(mylist, int)), c = 1;
+			printf("%c%s", va_arg(ap, int), space);
 			break;
 		case 'i':
-			printf("%d", va_arg(mylist, int)), c = 1;
+			printf("%d%s", va_arg(ap, int), space);
 			break;
 		case 'f':
-			printf("%f", va_arg(mylist, double)), c = 1;
+			printf("%f%s", va_arg(ap, double), space);
 			break;
 		case 's':
-			str = va_arg(mylist, char *), c = 1;
-			if (!str)
-			{
-				printf("(nil)");
-				break;
-			}
-			printf("%s", str);
+			str = va_arg(ap, char *);
+			if (!str || !*str)
+				str = "(nil)";
+			printf("%s%s", str, space);
 			break;
-		} i++;
+		}
+		j++;
 	}
-	va_end(mylist);
 	printf("\n");
 }
