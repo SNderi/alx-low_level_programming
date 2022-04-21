@@ -22,7 +22,7 @@ list_t *add_node(list_t **head, const char *str)
 	new_node->next = *head;
 	*head = new_node;
 
-	if (new_node == NULL)
+	if (new_node == NULL || str_copy == NULL)
 	{
 		free(new_node);
 		return (NULL);
