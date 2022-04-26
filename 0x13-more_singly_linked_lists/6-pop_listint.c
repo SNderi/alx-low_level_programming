@@ -15,8 +15,10 @@ void free_listint(listint_t **head)
 	if (head == NULL)
 		return (0);
 
-	temp = (*head)->next;
+	temp = *head;
 	data = (*head)->n;
-	free(head);
-	return (temp->n);
+	*head =(*head)->next
+	free(temp);
+
+	return (data);
 }
