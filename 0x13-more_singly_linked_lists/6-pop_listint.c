@@ -7,7 +7,7 @@
  * Return: Head node's data or 0 if linked list is empty
  */
 
-void free_listint(listint_t **head)
+void pop_listint(listint_t **head)
 {
 	listint_t *temp;
 	int data;
