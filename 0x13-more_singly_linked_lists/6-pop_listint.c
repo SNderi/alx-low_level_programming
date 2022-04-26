@@ -15,6 +15,9 @@ void free_listint(listint_t **head)
 	if (head == NULL)
 		return (0);
 
+	if (*head == NULL)
+		return (0);
+
 	temp = *head;
 	data = (*head)->n;
 	*head =(*head)->next
