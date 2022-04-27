@@ -10,21 +10,31 @@
 
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_t *new_node = malloc(sizeof(listint_t));
-	listint_t *temp = *head;
+	listint_t *temp;
+	listint_t *b;
 	int i = 0;
 
-	new_node->n = n;
+	b = *head;
+	temp = *head;
 
-	if (i == idx)
+	if (*head == NULL)
+		return (-1);
+	if (index == 0)
 	{
-		temp = head->next;
+		*head = (*head)->next;
+		temp->next = NULL;
 		free(temp);
 	}
-	new_node->next = temp->next;
-	temp->next = new_node;
 
-	if (new_node == NULL)
-		return (NULL);
-	return (new_node);
+	while (i < (idx - 1))
+	{
+		if (temp == NULL)
+			return (-1);
+		temp = temp->next;
+		i++;
+	}
+	b = temp->next;
+	temp->next = temp->next->next;
+	free(b);
+	return (1);
 }
