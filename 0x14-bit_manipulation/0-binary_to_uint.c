@@ -5,7 +5,7 @@
  * @b: String of 0 and 1
  *
  * Return: Converted number or 0 if b is null or
- * 	   theres any char thats not 0 or 1
+ * 		theres any char thats not 0 or 1
  */
 
 unsigned int binary_to_uint(const char *b)
