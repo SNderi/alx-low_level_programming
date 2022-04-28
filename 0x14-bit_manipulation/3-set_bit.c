@@ -4,7 +4,7 @@
  * set_bit - Sets value of a bit to 1 at a given index
  * @n: Binary number
  * @index: Position to change
- * 
+ *
  * Return: 1 if it worked or -1 if an error occurred
  */
 
