@@ -6,7 +6,7 @@
  * @letters: number of letters to read and print
  *
  * Return: Number of letters read and printed on success
- * 	0 if filename is NULL or write fails
+ *	0 if filename is NULL or write fails
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
@@ -17,7 +17,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char *buf = malloc(letters);
 
 	if ((fd == -1) || (filename == NULL))
-	       return (0);	
+		return (0);
 
 	s = read(fd, buf, letters);
 	if (s == -1)
