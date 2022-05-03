@@ -28,20 +28,19 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	while (size > 0)
+	while ((size = read(old, buf, 1024)) > 0)
 	{
-		size = read(old, buf, 1024);
-		if (size == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-			exit(98);
-		}
 		w = write(new, buf, size);
 		if (w == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
 			exit(99);
 		}
+	}
+	if (size == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
 	}
 	if (close(old) == -1)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d", old), exit(100);
