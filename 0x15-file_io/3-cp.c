@@ -31,7 +31,7 @@ int main(int argc, char **argv)
 	while ((size = read(old, buf, 1024)) > 0)
 	{
 		w = write(new, buf, size);
-		if (w == -1)
+		if (w != size)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
 			exit(99);
