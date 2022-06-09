@@ -5,6 +5,8 @@
  *
  * @h: Pointer to head of list
  * @idx: Position to add new node
+ * @n: Data to add to list
+ *
  * Return: Address of new node or NULL on failure
  */
 
@@ -16,6 +18,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *tmp = *h;
 	unsigned int count, i;
 
+	if (!h)
+		return (NULL);
 	count = 0;
 	while (head != NULL)
 	{
@@ -26,6 +30,17 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	if (new == NULL || idx >= count)
 		return (NULL);
+	
+	new->n = n;
+	if (idx == 0)
+	{
+		new->prev = NULL;
+		new->next = *h;
+		if (*h)
+			(*h)->prev = new;
+		*h = new;
+		return (new);
+	}
 	i = 0;
 	while (i != (idx - 1))
 	{
@@ -33,7 +48,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		i++;
 	}
 	temp = tmp->next;
-	new->n = n;
 	new->prev = tmp;
 	new->next = temp;
 	tmp->next = new;
