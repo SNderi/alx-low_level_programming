@@ -33,7 +33,8 @@ int validate(hash_node_t *ht, const char *key)
 	{
 		if (!strcmp(ht->key, key))
 			return (1);
-		ht = ht->next;
+		else
+			ht = ht->next;
 	}
 	return (0);
 }
