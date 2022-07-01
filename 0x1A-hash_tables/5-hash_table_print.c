@@ -24,30 +24,28 @@ void hash_table_print(const hash_table_t *ht)
 {
 	unsigned long int i;
 	hash_node_t *node = NULL;
-	char *prev_key = NULL;
-	unsigned long int idx;
+	int comma = 0;
 
 	if (!ht)
 		return;
 
+	printf("{");
 	for (i = 0; i < ht->size; i++)
 	{
 		if (ht->array[i] != NULL)
-			node = ht->array[i];
-	}
-	printf("{");
-
-	if (node)
-	{
-		prev_key = node->key;
-		idx = key_index((const unsigned char *)prev_key, ht->size);
-		for (i = 0; i < ht->size; i++)
 		{
-			print_list(ht->array[i]);
-			if (ht->array[i] && i < idx)
+			if (comma == 1)
 				printf(", ");
+
+			node = ht->array[i];
+			while (node != NULL)
+			{
+				print_list(ht->array[i]);
+				if (node != NULL)
+					printf(", ");
+			}
+			comma = 1
 		}
 	}
-
 	printf("}\n");
 }
