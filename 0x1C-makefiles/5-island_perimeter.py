@@ -15,10 +15,17 @@ def island_perimeter(grid):
             Grid cells are connected horizontally/vertically (not diagonally).
             Grid is rectangular, width and height don’t exceed 100
     """
-    dim=[]
-    for row in grid:
-        for col in row:
-            if grid[row][col]:
-                num += 1
-            dim.append(num)
-    return 2*(max(dim) + len(dim))
+    dim = 0
+    for i in range(len(grid)):
+        for j in range(len(grid[i])):
+            if grid[i][j]:
+                if j <= 0 or not grid[i][j - 1]:
+                    dim += 1
+                if i <= 0 or not grid[i - 1][j]:
+                    dim += 1
+                if j < len(grid[i]) and not grid[i][j + 1]:
+                    dim += 1
+                if i < len(grid) and not grid[i + 1][j]:
+                    dim += 1
+
+    return dim
