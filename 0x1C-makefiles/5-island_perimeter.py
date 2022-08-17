@@ -23,9 +23,9 @@ def island_perimeter(grid):
                     dim += 1
                 if i <= 0 or not grid[i - 1][j]:
                     dim += 1
-                if j < len(grid[i]) and not grid[i][j + 1]:
+                if j >= len(grid[i] - 1) or not grid[i][j + 1]:
                     dim += 1
-                if i < len(grid) and not grid[i + 1][j]:
+                if i >= len(grid) - 1 or not grid[i + 1][j]:
                     dim += 1
 
     return dim
